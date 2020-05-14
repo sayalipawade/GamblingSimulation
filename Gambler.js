@@ -43,7 +43,7 @@ function monthlyGambling()
         var cash=dailyGambling()
         dictionary[day]=cash
         totalAmount=totalAmount+dictionary[day];
-        console.log(dictionary[day])
+        console.log("Amount of day:"+dictionary[day])
     }
     if(totalAmount>0)
     {
