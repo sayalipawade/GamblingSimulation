@@ -11,7 +11,7 @@ const TOTAL_DAYS=20
 var cash=0
 var winningCash=0
 var totalAmount=0
-var dictionary={}
+var sumOfAmount={}
 var lucky_day=0
 
 //Function to calculate daily gambling
@@ -42,9 +42,9 @@ function monthlyGambling()
     for(day=1;day<=TOTAL_DAYS;day++)
     {
         var cash=dailyGambling()
-        dictionary[day]=cash
-        totalAmount=totalAmount+dictionary[day];
-        console.log("Amount of day:"+dictionary[day])
+        sumOfAmount[day]=cash
+        totalAmount=totalAmount+sumOfAmount[day];
+        console.log("Amount of day:"+sumOfAmount[day])
     }
     if(totalAmount>0)
     {
@@ -56,12 +56,14 @@ function monthlyGambling()
     }
     sort()
 }
+
+//function for sorting the amount
 function sort()
  {
     //Creating array of amount
-    var amount = Object.keys(dictionary).map(function(key)
+    var amount = Object.keys(sumOfAmount).map(function(key)
      {
-        return [key, dictionary[key]];
+        return [key,sumOfAmount[key]];
      });
   
     //Sort the array based on the second element
@@ -78,4 +80,20 @@ function sort()
     console.log("Unluckiest Day : ")
     console.log(amount.slice(amount.length-2, amount.length-1));
 }
-monthlyGambling()
+
+//function to checking gambler playing for next month or not
+function playNextMonth() 
+{
+    monthlyGambling()
+    if(totalAmount>0)
+    {
+        console.log("Gambler playing for next month");
+    }
+    else
+    {
+        console.log("Stop gambling");
+    }
+}
+playNextMonth()
+ 
+   
