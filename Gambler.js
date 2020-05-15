@@ -1,20 +1,26 @@
 console.log("Welcome to gambler simulation")
 
-//constants
+/**
+ * constants
+ */
 const STAKE_FOR_EVERY_DAY=100
 const BET=1
 const UPPER_LIMIT=STAKE_FOR_EVERY_DAY+(STAKE_FOR_EVERY_DAY * 50 /100)
 const LOWER_LIMIT=STAKE_FOR_EVERY_DAY-(STAKE_FOR_EVERY_DAY* 50 /100)
 const TOTAL_DAYS=20
 
-//variables
+/**
+ * variables
+ */
 var cash=0
 var winningCash=0
 var totalAmount=0
 var sumOfAmount={}
 var lucky_day=0
 
-//Function to calculate daily gambling
+/**
+ * Function to calculate daily gambling
+ */
 function dailyGambling()
 {
     winningCash=0
@@ -36,7 +42,9 @@ function dailyGambling()
     return winningCash
 }
 
-//Function to calculate monthly gambling
+/**
+ * Function to calculate monthly gambling
+ */
 function monthlyGambling()
 {
     for(day=1;day<=TOTAL_DAYS;day++)
@@ -57,7 +65,9 @@ function monthlyGambling()
     sort()
 }
 
-//function for sorting the amount
+/**
+ * function for sorting the amount
+ */
 function sort()
  {
     //Creating array of amount
@@ -81,7 +91,9 @@ function sort()
     console.log(amount.slice(amount.length-2, amount.length-1));
 }
 
-//function to checking gambler playing for next month or not
+/**
+ * function to checking gambler playing for next month or not
+ */
 function playNextMonth() 
 {
     monthlyGambling()
