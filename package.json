@@ -1,0 +1,19 @@
+{
+  "name": "gamblingsimulator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gambler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sayalipawade/GamblingSimulation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sayalipawade/GamblingSimulation/issues"
+  },
+  "homepage": "https://github.com/sayalipawade/GamblingSimulation#readme"
+}
